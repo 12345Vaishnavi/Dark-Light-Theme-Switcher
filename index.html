@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Light & Dark Theme using JavaScript</title>
+
+ <style>
+   .theme-icon{
+    height: 30px;
+    width:30px;
+    cursor: pointer;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: white;
+    } 
+
+    .active{
+      border: 1px solid gray;  
+    }
+
+    .theme-dark{
+      background-color: black;
+      color: white;
+    }
+
+    .theme-light{
+      background-color: white;
+      color: black;
+    }
+
+    .heading{
+      margin-top: 20px;  
+      text-align: center;
+    }
+
+    .content{
+       font-size: 20px; 
+       padding: 15px;
+       margin: 25px;
+    }
+
+ </style>
+</head>
+<body id="body">
+ <div>
+  <img src="dark.png" class="theme-icon active" id="img-dark" onclick="darkMode()"/>
+  <img src="light.png" class="theme-icon active" id="img-light" onclick="lightMode()"/>
+  <h1 class="heading">Kamal Nath aide who rose to become Madhya Pradesh’s first tribal mayor joins BJP</h1>
+  <p class="content">
+    Vikram Ahake, Congress leader and Madhya Pradesh’s first tribal mayor from Chhindwara, quit the
+     party and joined the BJP on Monday. A key loyalist of senior Congress leader Kamal Nath, 
+     Ahake’s name was suggested for the mayoral post by Nath in 2022 despite opposition from a 
+     section of the Chhindwara party unit.
+     However, Kamal Nath’s decision prevailed and Ahake became mayor at the same time Droupadi Murmu
+     became India’s first tribal President.
+     Ahake’s elevation was seen as an attempt by the Congress to counter the BJP’s game plan of
+     making inroads into the tribal community, which forms a significant chunk of the Congress’s 
+     voting base.
+  </p>
+
+   <p class="content">
+    The latest development comes on the heels of tribal MLA and member of the erstwhile Harrai 
+    royal family Kamlesh Pratap Shah quitting the party over differences with Kamal Nath’s son and
+    sitting MP Nakul Nath. The BJP has been weaning away Congress leaders in Chhindwara, claiming to
+    break away more than 2,000 of them in the district in an attempt to win the lone seat that 
+    eluded them in the previous election.</p>
+
+    <p class="content">
+     Vikram Ahake, who hails from Rajakhoh Dana village in Chhindwara, has roots that are deeply
+     embedded in the region’s tribal fabric. His mother Nirmala serves as an Anganwadi worker,
+     while his father Naresh, a 55-year-old farmer, toils in their modest two-acre agricultural 
+     holding. As the sole male offspring, Ahake has shouldered the responsibility of assisting his
+     father in the fields.
+   </p>
+</div>
+
+<script>
+  function darkMode(){
+   const imgDark = document.getElementById("img-dark");
+    imgDark.classList.add("active");
+
+    const imgLight = document.getElementById("img-light");
+    imgLight.classList.remove("active");
+
+    const bodyElement = document.getElementById("body");
+     bodyElement.className = 'theme-dark';
+
+  }  
+
+  function lightMode(){
+
+    const imgLight = document.getElementById("img-light");
+    imgLight.classList.add("active");
+
+    const imgDark = document.getElementById("img-dark");
+    imgDark.classList.remove("active");
+
+    const bodyElement = document.getElementById("body");
+     bodyElement.className = 'theme-light';
+
+}  
+</script>
+
+    
+</body>
+</html>
